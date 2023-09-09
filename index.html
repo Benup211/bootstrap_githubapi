@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Github API</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color:rgb(20 29 47);
+      color: white;
+    }
+
+    .avatar {
+      width: 30%;
+      height: 30%;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 20px auto;
+    }
+    #result-container{
+        background-color: rgb(30 42 71);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center text-white">Github API</h1>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="input-group mb-3">
+          <input type="text" id="username-input" class="form-control" placeholder="Enter GitHub username" aria-label="GitHub username">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" onclick="fetchUserData()">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-6 offset-md-3">
+        <div id="result-container" class="d-none p-4 rounded-lg m-2">
+          <div class="text-center">
+            <img id="avatar" class="avatar" src="" alt="Avatar">
+          </div>
+          <h2>User Information</h2>
+          <p><strong>Login:</strong> <span id="login"></span></p>
+          <p><strong>Repositories:</strong> <span id="repos"></span></p>
+          <p><strong>Followers:</strong> <span id="followers"></span></p>
+          <p><strong>Following:</strong> <span id="following"></span></p>
+          <p><strong>Location:</strong> <span id="location"></span></p>
+          <p><strong>Twitter:</strong> <span id="twitter"></span></p>
+          <p><strong>Organizations:</strong> <span id="organizations"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./scripts.js"></script>
+</body>
+</html>
